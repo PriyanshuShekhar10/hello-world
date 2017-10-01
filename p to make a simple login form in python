@@ -1,0 +1,55 @@
+
+import random
+
+a = random.randint(1, 500)
+
+
+def create():
+
+    print("""
+    WELCOME TO FASEBOOK
+    -------------------
+    enter your name.
+    ------------------
+    """)
+    x = str(input())
+    while True:
+        print("make a password,", x, ".")
+        y = str(input())
+        print("double check.")
+        z = str(input())
+        if str(z) == str(y):
+             print("your account is made. your account number is", a, ".")
+             print("just enter this number to log in.")
+             file = open("data.txt", "w" )
+             t = file.write(a)
+             file.close()
+
+             break
+        else:
+             print("wrong password.")
+def sign():
+    while True:
+        print("enter your account no.")
+
+        s = input()
+        if int(s) == int(t):
+            print("you may enter. press enter.")
+            input()
+            break
+        else:
+            print("wrong password.")
+def status():
+    while True:
+        print("what is in your mind?")
+        d = str(input())
+        with open("timeline.txt", 'a') as file:
+            file.write("\nyou:")
+
+            file.write(d)
+            file.close()
+            print("your post is available on your timeline.")
+
+create()
+sign()
+status()
